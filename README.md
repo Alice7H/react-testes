@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Testing Library
 
-## Available Scripts
+O React Testing Library surgiu com uma abordagem centrada no usuário e com padrões para enfatizar boas práticas de semântica e acessibilidade.
 
-In the project directory, you can run:
+Hoje faz parte do pacote padrão de uma aplicação feita com o Create React App, por isso foi usada nesta aplicação.
 
-### `npm start`
+Teste de funções de regra de negócio
+Teste de componente de UI
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O framework Jest já vem instalado e configurado por padrão nos projetos iniciados com Create React App.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Ao rodar o comando `npm test`, a aplicação entrará no modo watch, e toda vez que você alterar algo no seu código, ele rodará os testes novamente.
 
-### `npm test`
+Os arquivos de testes tem a extensão .test.js.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`describe` é uma função de agrupamento lógico. Segundo a documentação, isso não é necessário e nem recomendado.
 
-### `npm run build`
+Porém no curso essa função foi utilizada para descrever melhor cada cenário de teste.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`it` ou `test` são blocos com o nome do teste e seu código.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`expect` é uma função global para fazer asserções.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Deve-se haver a separação entre implementação da função e o teste.
 
-### `npm run eject`
+Criar vários casos de teste ajuda para que o valor esteja correto em vários cenários.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Função pura não muda qualquer estado na aplicação, ela precisa sempre gerar o mesmo resultado com os mesmos argumentos, ela não depende de nenhum fator externo ou faz alterações globais na aplicação e temos a previsão do resultado para poder escrever um teste unitário.
