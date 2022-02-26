@@ -7,11 +7,13 @@ import api from './api';
 import './App.css';
 
 export const calcularNovoSaldo = (valores, saldo) => {
-  if (valores.transacao === 'deposito') {
-    return saldo + parseInt(valores.valor)
-  } else {
-    return saldo - parseInt(valores.valor);
+  const valor = parseInt(valores.valor);
+  if (valores.transacao === 'deposito'){ 
+    return saldo + valor;
+  }else if(saldo > valor){
+    return saldo - valor;
   }
+  return saldo;  
 }
 
 function App() {

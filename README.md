@@ -40,3 +40,9 @@ Na primeira execução do teste, o terminal aponta para um novo snapshot escrito
 Toda vez que eu rodar o teste novamente, haverá uma checagem se o novo snapshot é igual ao primeiro e o terminal só avisará se o teste passou ou não.
 
 Clicando na tecla `u` para update, atualizamos o snapshot propositalmente.
+
+## Eventos de disparo
+
+Podemos simular a realização de alguns comportamentos na aplicação, como as transações, usando o `fireEvent`.
+
+[Lista eventos suportados](https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js)
