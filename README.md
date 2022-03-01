@@ -50,7 +50,7 @@ Clicando na tecla `u` para update, atualizamos o snapshot propositalmente.
 
 Podemos simular a realização de alguns comportamentos na aplicação, como as transações, usando o `fireEvent`.
 
-[Lista eventos suportados](https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js)
+- [Lista eventos suportados](https://github.com/testing-library/dom-testing-library/blob/main/src/event-map.js)
 
 ## Desafio 1
 
